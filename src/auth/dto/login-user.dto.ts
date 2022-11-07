@@ -1,11 +1,6 @@
 import { IsEmail, IsNotEmpty, Length } from 'class-validator';
-import { User } from '../schemas/user.schema';
 
-export class CreateUserDto extends User {
-  @IsNotEmpty()
-  @Length(4, 20)
-  username: string;
-
+export class LoginUserDto {
   @IsNotEmpty()
   @IsEmail()
   email: string;
